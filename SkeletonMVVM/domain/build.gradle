@@ -1,0 +1,7 @@
+import dependencies.Dependencies
+
+apply from: "$rootDir/tools/commons_java_build.gradle"
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}

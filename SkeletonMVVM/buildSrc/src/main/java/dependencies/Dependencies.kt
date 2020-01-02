@@ -28,4 +28,16 @@ object Dependencies {
         const val RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}"
         const val RETROFIT_GSON = "com.squareup.retrofit2:converter-gson:${Versions.RETROFIT}"
     }
+
+    object Room {
+        const val ROOM = "androidx.room:room-runtime:${Versions.ROOM}"
+        const val ROOM_RX = "androidx.room:room-rxjava2:${Versions.ROOM}"
+        const val ROOM_COMPILER = "androidx.room:room-compiler:${Versions.ROOM}"
+    }
+
+    object RX {
+        const val RX_JAVA = "io.reactivex.rxjava2:rxjava:${Versions.RX_JAVA}"
+        const val RX_KOTLIN = "io.reactivex.rxjava2:rxkotlin:${Versions.RX_KOTLIN}"
+        const val RX_ANDROID = "io.reactivex.rxjava2:rxandroid:${Versions.RX_ANDROID}"
+    }
 }
