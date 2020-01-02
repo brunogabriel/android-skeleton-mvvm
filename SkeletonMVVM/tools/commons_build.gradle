@@ -1,0 +1,26 @@
+import dependencies.TestDependencies
+import dependencies.Modules
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    testImplementation TestDependencies.JUNIT
+    testImplementation TestDependencies.ARCH_TESTING
+    androidTestImplementation TestDependencies.ESPRESSO_CORE
+    androidTestImplementation TestDependencies.ESPRESSO_CONTRIB
+    androidTestImplementation TestDependencies.EXT_JUNIT
+    androidTestImplementation TestDependencies.KOIN_TEST
+}
