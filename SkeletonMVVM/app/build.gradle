@@ -12,8 +12,13 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Modules
+    implementation project(Modules.STYLEGUIDE)
+    implementation project(Modules.PHOTOLIST)
+
+    // Libraries
     implementation Dependencies.Android.APPCOMPAT
     implementation Dependencies.KTX
-    implementation Dependencies.Android.CONSTRAINT_LAYOUT
     implementation Dependencies.Koin.CORE
 }

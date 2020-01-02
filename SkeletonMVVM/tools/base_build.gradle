@@ -1,1 +1,1 @@
-apply from: "$rootDir/tools/commons_build.gradle.gradle"
+apply from: "$rootDir/tools/commons_build.gradle"

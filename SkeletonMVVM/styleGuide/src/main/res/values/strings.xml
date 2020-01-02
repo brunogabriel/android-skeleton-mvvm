@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SkeletonMVVM</string>
+    <string name="photo_list_name">Photo List</string>
 </resources>
