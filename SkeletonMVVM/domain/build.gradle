@@ -4,4 +4,7 @@ apply from: "$rootDir/tools/commons_java_build.gradle"
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation Dependencies.RX.RX_JAVA
+    implementation Dependencies.KOIN
 }
