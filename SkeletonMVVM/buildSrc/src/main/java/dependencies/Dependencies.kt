@@ -26,10 +26,11 @@ object Dependencies {
 
     object Network {
         const val RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}"
+        const val RETROFIT_RX_ADAPTER = "com.squareup.retrofit2:adapter-rxjava:${Versions.RETROFIT}"
         const val RETROFIT_GSON = "com.squareup.retrofit2:converter-gson:${Versions.RETROFIT}"
     }
 
-    object Room {
+    object Database {
         const val ROOM = "androidx.room:room-runtime:${Versions.ROOM}"
         const val ROOM_RX = "androidx.room:room-rxjava2:${Versions.ROOM}"
         const val ROOM_COMPILER = "androidx.room:room-compiler:${Versions.ROOM}"

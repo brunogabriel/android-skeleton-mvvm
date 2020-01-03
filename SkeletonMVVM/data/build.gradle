@@ -1,0 +1,30 @@
+import dependencies.Dependencies
+import dependencies.Modules
+
+apply plugin: 'com.android.library'
+apply from: "$rootDir/tools/base_build.gradle"
+apply plugin: 'kotlin-kapt'
+
+android {
+    defaultConfig {
+        buildConfigField "String", "API_URL", "\"https://jsonplaceholder.typicode.com/\""
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Modules
+    implementation project(Modules.DOMAIN)
+
+    // Libraries
+    implementation Dependencies.RX.RX_KOTLIN
+    implementation Dependencies.RX.RX_ANDROID
+    implementation Dependencies.KOIN
+    implementation Dependencies.Network.RETROFIT
+    implementation Dependencies.Network.RETROFIT_GSON
+
+    implementation Dependencies.Database.ROOM
+    implementation Dependencies.Database.ROOM_RX
+    kapt Dependencies.Database.ROOM_COMPILER
+}

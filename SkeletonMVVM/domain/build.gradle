@@ -1,10 +1,13 @@
 import dependencies.Dependencies
 
-apply from: "$rootDir/tools/commons_java_build.gradle"
+apply plugin: 'com.android.library'
+apply from: "$rootDir/tools/base_build.gradle"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation Dependencies.RX.RX_JAVA
+    implementation Dependencies.RX.RX_KOTLIN
+    implementation Dependencies.RX.RX_ANDROID
     implementation Dependencies.KOIN
 }

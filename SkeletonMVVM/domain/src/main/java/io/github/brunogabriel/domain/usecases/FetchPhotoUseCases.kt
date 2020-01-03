@@ -8,11 +8,11 @@ import io.reactivex.Single
 /**
  * Created by bruno on 2020-01-02
  */
-class FetchPhotosUseCases(
-    private val photoRepository: PhotoRepository,
+class FetchPhotoUseCases(
+    private val repository: PhotoRepository,
     private val scheduler: Scheduler
 ) {
     fun fetchPhotos(forceUpdate: Boolean): Single<List<Photo>> {
-        return photoRepository.fetchPhotos(forceUpdate).subscribeOn(scheduler)
+        return repository.fetch(forceUpdate).subscribeOn(scheduler)
     }
 }

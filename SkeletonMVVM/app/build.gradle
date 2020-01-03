@@ -15,6 +15,9 @@ dependencies {
 
     // Modules
     implementation project(Modules.STYLEGUIDE)
+    implementation project(Modules.CORETEST)
+
+
     implementation project(Modules.PHOTOLIST)
 
     // Libraries

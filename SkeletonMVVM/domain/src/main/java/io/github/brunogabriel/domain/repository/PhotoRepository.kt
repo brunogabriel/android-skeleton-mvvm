@@ -7,5 +7,5 @@ import io.reactivex.Single
  * Created by bruno on 2020-01-02
  */
 interface PhotoRepository {
-    fun fetchPhotos(forceUpdate: Boolean): Single<List<Photo>>
+    fun fetch(forceUpdate: Boolean): Single<List<Photo>>
 }
