@@ -25,8 +25,8 @@ class RemotePhotoDataSourceImplementationTest {
     @Test
     fun `should fetch photos`() {
         // given
-        val photos = listOf(Photo(1000, "title", "url", "thumb"))
-        val photosPayload = listOf(PhotoPayload(1000, "title", "url", "thumb"))
+        val photos = listOf(Photo(1000L, "title", "url", "thumb"))
+        val photosPayload = listOf(PhotoPayload(1000L, "title", "url", "thumb"))
         whenever(photoService.fetchPhotos()).thenReturn(Single.just(photosPayload))
 
         // when

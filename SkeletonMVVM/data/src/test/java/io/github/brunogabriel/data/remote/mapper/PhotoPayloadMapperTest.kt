@@ -13,13 +13,13 @@ class PhotoPayloadMapperTest {
     @Test
     fun `should map to photo`() {
         // val
-        val payload = listOf(PhotoPayload(1999, "a", "b", "c"))
+        val payload = listOf(PhotoPayload(1999L, "a", "b", "c"))
 
         // when
         val result = PhotoPayloadMapper.mapToPhoto(payload)
 
         // then
         assertThat(result.size, `is`(1))
-        assertThat(result[0], `is`(Photo(1999, "a", "b", "c")))
+        assertThat(result[0], `is`(Photo(1999L, "a", "b", "c")))
     }
 }

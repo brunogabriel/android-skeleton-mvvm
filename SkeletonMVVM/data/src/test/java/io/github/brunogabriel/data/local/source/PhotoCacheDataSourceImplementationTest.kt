@@ -26,7 +26,7 @@ class PhotoCacheDataSourceImplementationTest {
     @Test
     fun `should fetch photos`() {
         // given
-        val cache = listOf(PhotoCache(1, "anyTitle", "anyUrl", "anyThumbnailUrl"))
+        val cache = listOf(PhotoCache(1L, "anyTitle", "anyUrl", "anyThumbnailUrl"))
         whenever(photoDao.findPhotos()).thenReturn(Single.just(cache))
 
         // when
@@ -35,15 +35,15 @@ class PhotoCacheDataSourceImplementationTest {
         // then
         result
             .test()
-            .assertValues(listOf(Photo(1, "anyTitle", "anyUrl", "anyThumbnailUrl")))
+            .assertValues(listOf(Photo(1L, "anyTitle", "anyUrl", "anyThumbnailUrl")))
             .dispose()
     }
 
     @Test
     fun `should insert data`() {
         // given
-        val photos = listOf(Photo(1, "anyTitle", "anyUrl", "anyThumbnailUrl"))
-        val cache = listOf(PhotoCache(1, "anyTitle", "anyUrl", "anyThumbnailUrl"))
+        val photos = listOf(Photo(1L, "anyTitle", "anyUrl", "anyThumbnailUrl"))
+        val cache = listOf(PhotoCache(1L, "anyTitle", "anyUrl", "anyThumbnailUrl"))
 
         // when
         photoCacheDataSource.insertData(photos)
@@ -55,8 +55,8 @@ class PhotoCacheDataSourceImplementationTest {
     @Test
     fun `should update data`() {
         // given
-        val photos = listOf(Photo(1, "anyTitle", "anyUrl", "anyThumbnailUrl"))
-        val cache = listOf(PhotoCache(1, "anyTitle", "anyUrl", "anyThumbnailUrl"))
+        val photos = listOf(Photo(1L, "anyTitle", "anyUrl", "anyThumbnailUrl"))
+        val cache = listOf(PhotoCache(1L, "anyTitle", "anyUrl", "anyThumbnailUrl"))
 
         // when
         photoCacheDataSource.updateData(photos)

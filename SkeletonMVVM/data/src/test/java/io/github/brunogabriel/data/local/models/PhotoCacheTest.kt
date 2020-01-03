@@ -11,8 +11,8 @@ class PhotoCacheTest {
     @Test
     fun `should be equals`() {
         // given
-        val input = PhotoCache(199, "a", "b", "c")
+        val input = PhotoCache(199L, "a", "b", "c")
 
-        assertThat(input, `is`(PhotoCache(199, "a", "b", "c")))
+        assertThat(input, `is`(PhotoCache(199L, "a", "b", "c")))
     }
 }

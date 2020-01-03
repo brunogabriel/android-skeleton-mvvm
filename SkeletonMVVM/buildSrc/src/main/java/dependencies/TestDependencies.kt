@@ -14,4 +14,5 @@ object TestDependencies {
     const val ESPRESSO_RUNNER = "androidx.test:runner:${Versions.ESPRESSO_RUNNER}"
     const val ESPRESSO_RULE = "androidx.test:rules:${Versions.ESPRESSO_RULE}"
     const val ORCHESTRATOR = "androidx.test:orchestrator:${Versions.ESPRESSO_RUNNER}"
+    const val WIREMOCK = "com.github.tomakehurst:wiremock-standalone:${Versions.WIREMOCK}"
 }

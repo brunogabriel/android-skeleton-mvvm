@@ -8,6 +8,7 @@ object Modules {
     const val STYLEGUIDE = ":styleGuide"
     const val CORETEST = ":coreTest"
     const val DOMAIN = ":domain"
+    const val DATA = ":data"
 
     // features
     const val PHOTOLIST = ":photoList"

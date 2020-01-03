@@ -20,4 +20,5 @@ dependencies {
     implementation TestDependencies.ESPRESSO_RUNNER
     implementation TestDependencies.ESPRESSO_CORE
     implementation TestDependencies.ESPRESSO_RULE
+    implementation TestDependencies.WIREMOCK
 }

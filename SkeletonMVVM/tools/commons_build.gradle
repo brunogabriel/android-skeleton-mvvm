@@ -27,4 +27,7 @@ dependencies {
     androidTestImplementation TestDependencies.ESPRESSO_RUNNER
     androidTestImplementation TestDependencies.ESPRESSO_RULE
     androidTestImplementation TestDependencies.ESPRESSO_CONTRIB
+    androidTestImplementation TestDependencies.WIREMOCK
+    androidTestImplementation TestDependencies.ARCH_TESTING
+
 }

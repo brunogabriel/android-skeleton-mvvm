@@ -11,12 +11,12 @@ class PhotoPayloadTest {
     @Test
     fun `should be equals`() {
         // given
-        val photoPayload = PhotoPayload(123, "1", "2", "3")
+        val photoPayload = PhotoPayload(123L, "1", "2", "3")
 
         // then
         assertThat(
             photoPayload, `is`(
-                PhotoPayload(123, "1", "2", "3")
+                PhotoPayload(123L, "1", "2", "3")
             )
         )
     }

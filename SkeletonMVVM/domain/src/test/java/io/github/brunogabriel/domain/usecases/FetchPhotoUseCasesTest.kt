@@ -28,8 +28,8 @@ class FetchPhotoUseCasesTest {
     fun `should fetch photos`() {
         // given
         val photos = listOf(
-            Photo(1, "a", "a", "a"),
-            Photo(2, "b", "b", "b")
+            Photo(1L, "a", "a", "a"),
+            Photo(2L, "b", "b", "b")
         )
         whenever(repository.fetch(any())).doReturn(Single.just(photos))
 

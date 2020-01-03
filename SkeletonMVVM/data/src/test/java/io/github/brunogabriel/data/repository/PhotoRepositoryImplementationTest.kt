@@ -29,8 +29,8 @@ class PhotoRepositoryImplementationTest {
     fun `should fetch photos from cache`() {
         // given
         val photos = listOf(
-            Photo(1, "", "", ""),
-            Photo(2, "", "", "")
+            Photo(1L, "", "", ""),
+            Photo(2L, "", "", "")
         )
         whenever(photoCacheDataSource.fetchPhotos()).thenReturn(Single.just(photos))
 
@@ -48,8 +48,8 @@ class PhotoRepositoryImplementationTest {
     fun `should force update from remote data source`() {
         // given
         val photos = listOf(
-            Photo(1, "", "", ""),
-            Photo(2, "", "", "")
+            Photo(1L, "", "", ""),
+            Photo(2L, "", "", "")
         )
         whenever(remotePhotoDataSource.fetchPhotos()).thenReturn(Single.just(photos))
 
@@ -70,8 +70,8 @@ class PhotoRepositoryImplementationTest {
     fun `should request and insert data when cache is empty`() {
         // given
         val photos = listOf(
-            Photo(1, "", "", ""),
-            Photo(2, "", "", "")
+            Photo(1L, "", "", ""),
+            Photo(2L, "", "", "")
         )
         whenever(photoCacheDataSource.fetchPhotos()).thenReturn(Single.just(emptyList()))
         whenever(remotePhotoDataSource.fetchPhotos()).thenReturn(Single.just(photos))

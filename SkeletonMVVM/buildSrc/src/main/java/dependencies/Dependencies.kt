@@ -26,7 +26,7 @@ object Dependencies {
 
     object Network {
         const val RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}"
-        const val RETROFIT_RX_ADAPTER = "com.squareup.retrofit2:adapter-rxjava:${Versions.RETROFIT}"
+        const val RETROFIT_RX_ADAPTER = "com.squareup.retrofit2:adapter-rxjava2:${Versions.RETROFIT}"
         const val RETROFIT_GSON = "com.squareup.retrofit2:converter-gson:${Versions.RETROFIT}"
     }
 

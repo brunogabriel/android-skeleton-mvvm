@@ -13,26 +13,26 @@ class PhotoCacheMapperTest {
     @Test
     fun `should map to photo`() {
         // given
-        val cache = listOf(PhotoCache(199, "a", "b", "c"))
+        val cache = listOf(PhotoCache(199L, "a", "b", "c"))
 
         // when
         val result = PhotoCacheMapper.mapToPhoto(cache)
 
         // then
         assertThat(result.size, `is`(1))
-        assertThat(result[0], `is`(Photo(199, "a", "b", "c")))
+        assertThat(result[0], `is`(Photo(199L, "a", "b", "c")))
     }
 
     @Test
     fun `should map to cache`() {
         // given
-        val photos = listOf(Photo(199, "a", "b", "c"))
+        val photos = listOf(Photo(199L, "a", "b", "c"))
 
         // when
         val result = PhotoCacheMapper.mapToCache(photos)
 
         // then
         assertThat(result.size, `is`(1))
-        assertThat(result[0], `is`(PhotoCache(199, "a", "b", "c")))
+        assertThat(result[0], `is`(PhotoCache(199L, "a", "b", "c")))
     }
 }
