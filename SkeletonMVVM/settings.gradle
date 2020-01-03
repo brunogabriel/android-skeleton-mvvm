@@ -1,2 +1,2 @@
-include ':app', ':buildSrc', ':styleGuide', ':photoList', ':domain', ':coreTest', ':data'
+include ':app', ':buildSrc', ':styleGuide', ':photoList', ':domain', ':coreTest', ':data', ':core'
 rootProject.name='SkeletonMVVM'

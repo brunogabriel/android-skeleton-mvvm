@@ -7,4 +7,5 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation Dependencies.Android.APPCOMPAT
     implementation Dependencies.Android.MATERIAL
+    implementation Dependencies.Android.CONSTRAINT_LAYOUT
 }

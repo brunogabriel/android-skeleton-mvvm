@@ -1,4 +1,4 @@
-package io.github.brunogabriel.styleguide
+package io.github.brunogabriel.core
 
 import org.junit.Test
 

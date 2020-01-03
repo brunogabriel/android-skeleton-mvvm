@@ -9,6 +9,7 @@ object Modules {
     const val CORETEST = ":coreTest"
     const val DOMAIN = ":domain"
     const val DATA = ":data"
+    const val CORE = ":core"
 
     // features
     const val PHOTOLIST = ":photoList"

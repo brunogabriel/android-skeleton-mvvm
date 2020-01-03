@@ -3,6 +3,7 @@ package io.github.brunogabriel.skeletonmvvm
 import android.app.Application
 import io.github.brunogabriel.data.di.dataModules
 import io.github.brunogabriel.domain.di.domainModules
+import io.github.brunogabriel.photolist.di.photoListModules
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -14,7 +15,7 @@ class SkeletonApplication : Application() {
         super.onCreate()
         startKoin {
             androidContext(this@SkeletonApplication)
-            modules(dataModules + domainModules)
+            modules(dataModules + domainModules + photoListModules)
         }
     }
 }

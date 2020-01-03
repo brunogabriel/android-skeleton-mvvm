@@ -8,6 +8,9 @@ android {
     defaultConfig {
         applicationId AndroidConfig.APPLICATION_ID
     }
+    dataBinding {
+        enabled true
+    }
 }
 
 dependencies {
