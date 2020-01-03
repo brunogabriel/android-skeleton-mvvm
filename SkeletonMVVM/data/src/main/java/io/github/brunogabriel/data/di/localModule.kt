@@ -3,6 +3,8 @@ package io.github.brunogabriel.data.di
 import androidx.annotation.VisibleForTesting
 import androidx.room.Room
 import io.github.brunogabriel.data.local.database.AppDatabase
+import io.github.brunogabriel.data.local.source.PhotoCacheDataSource
+import io.github.brunogabriel.data.local.source.PhotoCacheDataSourceImplementation
 import org.koin.dsl.module
 
 /**
@@ -26,4 +28,11 @@ val localModule = module {
 
     // DAOs factory
     factory { get<AppDatabase>().photoDao() }
+
+    // source
+    factory<PhotoCacheDataSource> {
+        PhotoCacheDataSourceImplementation(
+            photoDao = get()
+        )
+    }
 }

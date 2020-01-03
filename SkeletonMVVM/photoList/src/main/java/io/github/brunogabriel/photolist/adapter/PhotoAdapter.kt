@@ -4,8 +4,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import io.github.brunogabriel.core.extensions.inflate
+import io.github.brunogabriel.core.extensions.loadImage
 import io.github.brunogabriel.domain.entities.Photo
 import io.github.brunogabriel.photolist.R
+import kotlinx.android.synthetic.main.holder_photo.view.*
 
 /**
  * Created by bruno on 2020-01-03
@@ -24,7 +26,8 @@ class PhotoAdapter : RecyclerView.Adapter<PhotoAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(photo: Photo) = with(itemView) {
-            // TODO: apply picasso data
+            title_text_view.text = photo.title
+            photo_image_view.loadImage(photo.thumbnailUrl)
         }
     }
 }
