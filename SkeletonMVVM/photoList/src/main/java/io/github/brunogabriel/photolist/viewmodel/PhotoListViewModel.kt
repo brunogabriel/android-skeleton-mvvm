@@ -1,5 +1,6 @@
 package io.github.brunogabriel.photolist.viewmodel
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import io.github.brunogabriel.core.ui.UiState
 import io.github.brunogabriel.core.ui.UiStateSingle
@@ -19,7 +20,7 @@ class PhotoListViewModel(
     private val _state = MutableLiveData<UiState<List<Photo>>>().apply {
         value = UiState.Loading
     }
-    val state: MutableLiveData<UiState<List<Photo>>>
+    val state: LiveData<UiState<List<Photo>>>
         get() = _state
 
     fun fetchPhotos(forceUpdate: Boolean = false) {
