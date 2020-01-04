@@ -5,6 +5,8 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.GridLayoutManager
+import io.github.brunogabriel.core.recyclerview.MarginItemDecoration
 import io.github.brunogabriel.core.ui.UiState
 import io.github.brunogabriel.photolist.adapter.PhotoAdapter
 import io.github.brunogabriel.photolist.databinding.ActivityPhotoListBinding
@@ -18,7 +20,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class PhotoListActivity : AppCompatActivity() {
 
     private val viewModel: PhotoListViewModel by viewModel()
-    private val adapter: PhotoAdapter by inject()
+    private val photoAdapter: PhotoAdapter by inject()
     private lateinit var binding: ActivityPhotoListBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +40,7 @@ class PhotoListActivity : AppCompatActivity() {
                     binding.loadingView.visibility = View.GONE
                     binding.tryAgainView.visibility = View.GONE
                     binding.photosRecyclerView.visibility = View.VISIBLE
-                    adapter.photos = uiState.data
+                    photoAdapter.photos = uiState.data
                 }
 
                 is UiState.Loading -> {
@@ -51,6 +53,14 @@ class PhotoListActivity : AppCompatActivity() {
                 }
             }
         })
-        binding.photosRecyclerView.adapter = adapter
+        binding.photosRecyclerView.apply {
+            adapter = photoAdapter
+            addItemDecoration(
+                MarginItemDecoration(
+                    resources.getDimensionPixelSize(R.dimen.margin_span_size),
+                    (this.layoutManager as GridLayoutManager).spanCount
+                )
+            )
+        }
     }
 }

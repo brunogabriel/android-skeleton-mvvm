@@ -30,8 +30,7 @@ class PhotoListViewModel(
             .subscribe(
                 {
                     _state.postValue(it)
-                }, {
-                }
+                }, { }
             ))
     }
 }

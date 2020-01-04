@@ -1,5 +1,4 @@
 import dependencies.TestDependencies
-import dependencies.Modules
 
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
@@ -13,6 +12,15 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    testOptions {
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+        animationsDisabled true
+
+        unitTests {
+            includeAndroidResources = true
+        }
+        unitTests.returnDefaultValues = true
     }
 }
 
@@ -29,5 +37,4 @@ dependencies {
     androidTestImplementation TestDependencies.ESPRESSO_CONTRIB
     androidTestImplementation TestDependencies.WIREMOCK
     androidTestImplementation TestDependencies.ARCH_TESTING
-
 }

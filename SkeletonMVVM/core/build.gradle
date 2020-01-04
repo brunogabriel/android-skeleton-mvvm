@@ -11,4 +11,5 @@ dependencies {
     implementation Dependencies.RX.RX_ANDROID
     implementation Dependencies.ARCH_COMPONENTS
     implementation Dependencies.PICASSO
+    implementation Dependencies.Android.RECYCLERVIEW
 }
