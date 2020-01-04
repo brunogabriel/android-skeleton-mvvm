@@ -2,4 +2,7 @@
     <string name="app_name">SkeletonMVVM</string>
     <string name="photo_list_name">Photo List</string>
     <string name="photo_image_desc">Photo</string>
+    <string name="something_wrong_happened">Something wrong happened</string>
+    <string name="verify_connection">Verify your connection and try again later</string>
+    <string name="try_again">Try again</string>
 </resources>

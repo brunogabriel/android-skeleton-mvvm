@@ -36,6 +36,7 @@ class PhotoListActivity : AppCompatActivity() {
             when (uiState) {
                 is UiState.Success -> {
                     binding.loadingView.visibility = View.GONE
+                    binding.tryAgainView.visibility = View.GONE
                     binding.photosRecyclerView.visibility = View.VISIBLE
                     adapter.photos = uiState.data
                 }
@@ -46,6 +47,7 @@ class PhotoListActivity : AppCompatActivity() {
 
                 is UiState.Failed -> {
                     binding.loadingView.visibility = View.GONE
+                    binding.tryAgainView.visibility = View.VISIBLE
                 }
             }
         })

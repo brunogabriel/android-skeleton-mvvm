@@ -31,12 +31,7 @@ class PhotoListViewModel(
                 {
                     _state.postValue(it)
                 }, {
-
                 }
             ))
-    }
-
-    fun onTryAgain() {
-        fetchPhotos(true)
     }
 }
