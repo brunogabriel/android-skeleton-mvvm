@@ -18,7 +18,6 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
  * Created by bruno on 2020-01-02
  */
 class PhotoListActivity : AppCompatActivity() {
-
     private val viewModel: PhotoListViewModel by viewModel()
     private val photoAdapter: PhotoAdapter by inject()
     private lateinit var binding: ActivityPhotoListBinding

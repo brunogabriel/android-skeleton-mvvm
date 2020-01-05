@@ -6,18 +6,14 @@ apply from: "$rootDir/tools/base_build.gradle"
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-android {
-    dataBinding {
-        enabled true
-    }
-}
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    
     // Modules
     implementation project(Modules.STYLEGUIDE)
     implementation project(Modules.CORE)
     implementation project(Modules.DOMAIN)
+    implementation project(Modules.DATA)
 
     // libraries
     implementation Dependencies.Android.APPCOMPAT

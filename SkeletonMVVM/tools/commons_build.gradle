@@ -1,4 +1,5 @@
 import dependencies.TestDependencies
+import dependencies.Modules
 
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
@@ -22,9 +23,15 @@ android {
         }
         unitTests.returnDefaultValues = true
     }
+    dataBinding {
+        enabled true
+    }
 }
 
 dependencies {
+    testImplementation project(Modules.CORETEST)
+    androidTestImplementation project(Modules.CORETEST)
+
     testImplementation TestDependencies.JUNIT
     testImplementation TestDependencies.ARCH_TESTING
     testImplementation TestDependencies.MOCKITO_KOTLIN
@@ -37,4 +44,6 @@ dependencies {
     androidTestImplementation TestDependencies.ESPRESSO_CONTRIB
     androidTestImplementation TestDependencies.WIREMOCK
     androidTestImplementation TestDependencies.ARCH_TESTING
+
+    androidTestUtil TestDependencies.ORCHESTRATOR
 }

@@ -1,5 +1,6 @@
 package io.github.brunogabriel.data.di
 
+import android.content.Context
 import androidx.annotation.VisibleForTesting
 import androidx.room.Room
 import io.github.brunogabriel.data.local.database.AppDatabase

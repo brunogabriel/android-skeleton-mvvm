@@ -8,9 +8,6 @@ android {
     defaultConfig {
         applicationId AndroidConfig.APPLICATION_ID
     }
-    dataBinding {
-        enabled true
-    }
 }
 
 dependencies {
@@ -18,11 +15,8 @@ dependencies {
 
     // Modules
     implementation project(Modules.STYLEGUIDE)
-    implementation project(Modules.CORETEST)
     implementation project(Modules.DOMAIN)
     implementation project(Modules.DATA)
-
-
     implementation project(Modules.PHOTOLIST)
 
     // Libraries
