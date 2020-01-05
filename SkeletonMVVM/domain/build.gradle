@@ -7,6 +7,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     // Libraries
+    implementation Dependencies.Android.APPCOMPAT
     implementation Dependencies.RX.RX_KOTLIN
     implementation Dependencies.RX.RX_ANDROID
     implementation Dependencies.KOIN
