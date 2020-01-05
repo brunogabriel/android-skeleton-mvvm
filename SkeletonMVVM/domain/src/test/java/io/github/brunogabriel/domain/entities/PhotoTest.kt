@@ -4,7 +4,6 @@ import org.hamcrest.core.Is.`is`
 import org.junit.Assert.assertThat
 import org.junit.Test
 
-
 /**
  * Created by bruno on 2020-01-02
  */

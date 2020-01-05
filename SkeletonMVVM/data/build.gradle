@@ -25,7 +25,6 @@ dependencies {
     implementation Dependencies.Network.RETROFIT_RX_ADAPTER
     implementation Dependencies.Network.RETROFIT
     implementation Dependencies.Network.RETROFIT_GSON
-
     implementation Dependencies.Database.ROOM
     implementation Dependencies.Database.ROOM_RX
     kapt Dependencies.Database.ROOM_COMPILER

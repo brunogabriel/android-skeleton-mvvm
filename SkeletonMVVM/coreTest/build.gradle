@@ -13,6 +13,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    // Libraries
     implementation Dependencies.Android.APPCOMPAT
     implementation Dependencies.Android.RECYCLERVIEW
     implementation Dependencies.ARCH_COMPONENTS
@@ -20,5 +21,4 @@ dependencies {
     implementation TestDependencies.ESPRESSO_RUNNER
     implementation TestDependencies.ESPRESSO_CORE
     implementation TestDependencies.ESPRESSO_RULE
-    implementation TestDependencies.WIREMOCK
 }

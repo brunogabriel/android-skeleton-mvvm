@@ -2,7 +2,6 @@ import dependencies.BuildPlugins
 import dependencies.Dependencies
 
 buildscript {
-
     repositories {
         google()
         jcenter()
@@ -10,6 +9,7 @@ buildscript {
     dependencies {
         classpath BuildPlugins.GRADLE
         classpath BuildPlugins.KOTLIN
+        classpath BuildPlugins.JACOCO
     }
 }
 

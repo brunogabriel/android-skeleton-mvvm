@@ -7,7 +7,7 @@ object Versions {
     const val ANDROIDX = "1.1.0"
     const val CORE_KTX = "1.1.0"
     const val CONSTRAINT_LAYOUT = "1.1.3"
-    const val RECYCLERVIEW = "1.0.0"
+    const val RECYCLERVIEW = "1.1.0"
     const val MATERIAL = "1.0.0"
     const val RX_JAVA = "2.2.7"
     const val RX_KOTLIN = "2.2.0"

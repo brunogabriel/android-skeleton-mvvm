@@ -17,7 +17,6 @@ android {
     testOptions {
         execution 'ANDROIDX_TEST_ORCHESTRATOR'
         animationsDisabled true
-
         unitTests {
             includeAndroidResources = true
         }
@@ -29,21 +28,24 @@ android {
 }
 
 dependencies {
+    // Modules
     testImplementation project(Modules.CORETEST)
     androidTestImplementation project(Modules.CORETEST)
 
+    // Libraries Test
     testImplementation TestDependencies.JUNIT
     testImplementation TestDependencies.ARCH_TESTING
     testImplementation TestDependencies.MOCKITO_KOTLIN
 
-    androidTestImplementation TestDependencies.ESPRESSO_CORE
-    androidTestImplementation TestDependencies.KOIN_TEST
+    // Libraries Android Test
+    androidTestImplementation TestDependencies.ARCH_TESTING
     androidTestImplementation TestDependencies.EXT_JUNIT
     androidTestImplementation TestDependencies.ESPRESSO_RUNNER
+    androidTestImplementation TestDependencies.ESPRESSO_CORE
     androidTestImplementation TestDependencies.ESPRESSO_RULE
     androidTestImplementation TestDependencies.ESPRESSO_CONTRIB
+    androidTestImplementation TestDependencies.KOIN_TEST
     androidTestImplementation TestDependencies.WIREMOCK
-    androidTestImplementation TestDependencies.ARCH_TESTING
 
     androidTestUtil TestDependencies.ORCHESTRATOR
 }
