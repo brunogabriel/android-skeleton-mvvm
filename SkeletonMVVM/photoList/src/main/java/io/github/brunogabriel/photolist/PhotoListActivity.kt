@@ -31,7 +31,16 @@ class PhotoListActivity : AppCompatActivity() {
     }
 
     private fun setupView() {
+        setupToolbar()
+        setupViewModel()
+        setupRecyclerView()
+    }
+
+    private fun setupToolbar() {
         setSupportActionBar(binding.toolbar)
+    }
+
+    private fun setupViewModel() {
         viewModel.fetchPhotos()
         viewModel.state.observe(this, Observer { uiState ->
             when (uiState) {
@@ -52,6 +61,9 @@ class PhotoListActivity : AppCompatActivity() {
                 }
             }
         })
+    }
+
+    private fun setupRecyclerView() {
         binding.photosRecyclerView.apply {
             adapter = photoAdapter
             addItemDecoration(
