@@ -1,0 +1,2 @@
+apply from: "$rootDir/tools/commons_build.gradle"
+apply from: "$rootDir/tools/jacoco.gradle"
