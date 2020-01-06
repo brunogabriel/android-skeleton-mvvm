@@ -10,4 +10,5 @@ dependencies {
     implementation Dependencies.Android.APPCOMPAT
     implementation Dependencies.Android.MATERIAL
     implementation Dependencies.Android.RECYCLERVIEW
+    implementation Dependencies.Android.CONSTRAINT_LAYOUT
 }
